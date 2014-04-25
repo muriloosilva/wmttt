@@ -1,0 +1,226 @@
+/** Add css rules here for your application. */
+/** Example rules used by the template application (remove for your app) */
+.demo-popup {
+	background-color: #FFFFFF;
+	margin: 0px;
+}
+
+.alignDir {
+	text-align: right;
+}
+
+.vCPF {
+	color: red;
+}
+
+.titulo {
+	color: black;
+	font-size: 18px;
+	font-style: normal;
+	margin-top: 10px;
+}
+
+.tbAtividades {
+	border-bottom-color: red;
+}
+
+/* .tbAtividades td{ */
+/* } */
+.tbAtividadesCol1 {
+	padding-left: 7px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border-bottom-color: red;
+	margin-right: 20px;
+}
+
+.col1 {
+	text-align: left;
+	padding-left: 7px;
+	width: 280px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.col2 {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.col3 {
+	padding-bottom: 15px;
+padding-top: 15px;
+}
+
+.col4 {
+	width: 64px;
+text-align: center;
+}
+
+.col4Palestra{
+	text-align: center;
+width: 215px;
+}
+
+.col5 {
+	width: 130px;
+	text-align: center;
+}
+
+.col6 {
+	width: 80px;
+	text-align: center;
+}
+
+.vpDatas {
+	
+}
+
+.vpHorario {
+	
+}
+
+.tbLinha {
+	
+}
+
+.tbACol2 {
+	
+}
+
+.tbCol2 {
+	
+}
+
+.tbAtividadesCol2 {
+	text-align: center;
+	width: 80px;
+}
+
+.tbAtividadesCol3 {
+	text-align: center;
+width: 130px;
+}
+
+.tbAtividadesCol4 {
+	
+}
+
+.tabelaLogin {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 50px
+}
+
+.tabelaCadastro {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 50px
+}
+
+.botaoFecharLogin {
+	padding-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: -76px;
+}
+
+.botaoFecharMaisInformacao {
+	padding-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: -173px;
+}
+
+.botaoFechar {
+	padding-right: 0px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+}
+
+/* .hpTop { */
+/* 	margin-right: 0px; */
+/* } */
+.botaoFecharCadastro {
+	padding-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: -174px;
+}
+
+.tabelaRecuperarSenha{
+	margin-top: 10px;
+margin-bottom: 10px;
+margin-right: 0px;
+}
+
+.ou {
+	margin-right: 11px;
+	margin-left: 12px;
+	margin-top: 10px;
+}
+
+.botaoCadastrar {
+	margin-top: 10px;
+	/* 	margin-left: 22px; */ /* 	margin-bottom: 10px; */
+/* 	padding-right: 50px; */ /* 	margin-left: -104px; */
+/* 	text-decoration: none; */
+}
+
+.btCadastrar {
+	margin-bottom: 10px;
+}
+
+.botaoCadastrar a:HOVER {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.hpMsg {
+	margin-top: 20px;
+}
+
+.hpBt {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/* .botaoLogin{ */
+/* 	padding-right: 0px; */
+/* } */
+/* .botaoCadastrar{ */
+/* 	padding-right: 100px; */
+/* } */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 0px 70px;
+	text-align: center;
+}
+
+.sendButton {
+	display: block;
+	font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
