@@ -18,12 +18,11 @@
 </head>
 <body>
 
-<% 
+<%
 	Usuario usuario = (Usuario)session.getAttribute("usuario");
     int idEvento = Integer.parseInt(request.getParameter("cod"));
-    Evento evento = EventoDAO.pegarEvento(idEvento);
-    
-  	%>
+    Evento evento = ProvaDAO.pegarEvento(idEvento);
+%>
 
 	<div id="principal">
 		 <div id="top"></div>
@@ -61,28 +60,28 @@
 	         		<table>
 	         			<%
 	         				Iterator<_Atividade> it = listaPalestrasEvento.iterator();
-	         				         								while(it.hasNext()){
-	         				         									_Atividade atividade = it.next();
-	         				         									out.println("<br><br>Palestra: " + atividade.getNome());
-	         				         									List<Inscricao> listaInscricaoAtividade =  InscricoesDAO.listaDeInscricaoAtividade(atividade);
-	         				         									if(listaInscricaoAtividade!= null){
-	         				         										Iterator<Inscricao> i = listaInscricaoAtividade.iterator();
-	         				         										while(i.hasNext()){
-	         				         											Inscricao inscricao = i.next();
-	         				         											out.println("<br>Inscrito: " + inscricao.getParticipante().getNome());
-	         				         										}
-	         				         									}
-	         				         									else{
-	         				         										out.println("sem inscrições");
-	         				         									}
+	         				         				         				         								while(it.hasNext()){
+	         				         				         				         									_Atividade atividade = it.next();
+	         				         				         				         									out.println("<br><br>Palestra: " + atividade.getNome());
+	         				         				         				         									List<Inscricao> listaInscricaoAtividade =  QuestoesProvaProfessorDAO.listaDeInscricaoAtividade(atividade);
+	         				         				         				         									if(listaInscricaoAtividade!= null){
+	         				         				         				         										Iterator<Inscricao> i = listaInscricaoAtividade.iterator();
+	         				         				         				         										while(i.hasNext()){
+	         				         				         				         											Inscricao inscricao = i.next();
+	         				         				         				         											out.println("<br>Inscrito: " + inscricao.getParticipante().getNome());
+	         				         				         				         										}
+	         				         				         				         									}
+	         				         				         				         									else{
+	         				         				         				         										out.println("sem inscrições");
+	         				         				         				         									}
 
-	         				         				         			}
+	         				         				         				         				         			}
 	         			%>
 	         		</table>
 	         		<%
 	         			}else{
-	         			         			         			out.println("Não existe inscrito");
-	         			         			         		}
+	         			         			         			         			         			out.println("Não existe inscrito");
+	         			         			         			         			         		}
 	         		%>
 	         	</div>
 	         	
@@ -91,35 +90,35 @@
 	         	
 	         	<%
 	         		         		List<_Atividade> listaPalestrasMinicurso = _AtividadeDAO.listaDeMinicursoEvento(idEvento);
-	         		         		         		         			if(listaPalestrasMinicurso != null){
+	         		         		         		         		         		         		         		         			if(listaPalestrasMinicurso != null){
 	         		         	%>
 	         	
 	         	
 	         		<table>
 	         			<%
 	         				Iterator<_Atividade> it = listaPalestrasMinicurso.iterator();
-	         				         								while(it.hasNext()){
-	         				         									_Atividade atividade = it.next();
-	         				         									out.println("<br><br>Palestra: " + atividade.getNome());
-	         				         									List<Inscricao> listaInscricaoAtividade =  InscricoesDAO.listaDeInscricaoAtividade(atividade);
-	         				         									if(listaInscricaoAtividade!= null){
-	         				         										Iterator<Inscricao> i = listaInscricaoAtividade.iterator();
-	         				         										while(i.hasNext()){
-	         				         											Inscricao inscricao = i.next();
-	         				         											out.println("<br>Inscrito: " + inscricao.getParticipante().getNome());
-	         				         										}
-	         				         									}
-	         				         									else{
-	         				         										out.println("sem inscrições");
-	         				         									}
+	         				         				         				         								while(it.hasNext()){
+	         				         				         				         									_Atividade atividade = it.next();
+	         				         				         				         									out.println("<br><br>Palestra: " + atividade.getNome());
+	         				         				         				         									List<Inscricao> listaInscricaoAtividade =  QuestoesProvaProfessorDAO.listaDeInscricaoAtividade(atividade);
+	         				         				         				         									if(listaInscricaoAtividade!= null){
+	         				         				         				         										Iterator<Inscricao> i = listaInscricaoAtividade.iterator();
+	         				         				         				         										while(i.hasNext()){
+	         				         				         				         											Inscricao inscricao = i.next();
+	         				         				         				         											out.println("<br>Inscrito: " + inscricao.getParticipante().getNome());
+	         				         				         				         										}
+	         				         				         				         									}
+	         				         				         				         									else{
+	         				         				         				         										out.println("sem inscrições");
+	         				         				         				         									}
 
-	         				         				         			}
+	         				         				         				         				         			}
 	         			%>
 	         		</table>
 	         		<%
 	         			}else{
-	         			         			         			out.println("Não existe inscrito");
-	         			         			         		}
+	         			         			         			         			         			out.println("Não existe inscrito");
+	         			         			         			         			         		}
 	         		%>
 	         	</div>
 	         	
@@ -127,29 +126,29 @@
 	         	<div id="tabelaAtividade">
 	         	<%
 	         		List<_Atividade> listaPalestrasOficinas = _AtividadeDAO.listaDeOficinaEvento(idEvento);
-	         		         			if(listaPalestrasOficinas != null){
+	         		         		         		         			if(listaPalestrasOficinas != null){
 	         	%>
 	         	
 	         	
 	         		<table>
 	         			<%
 	         				Iterator<_Atividade> it = listaPalestrasEvento.iterator();
-	         								while(it.hasNext()){
-	         									_Atividade atividade = it.next();
-	         									out.println("<br><br>Palestra: " + atividade.getNome());
-	         									List<Inscricao> listaInscricaoAtividade =  InscricoesDAO.listaDeInscricaoAtividade(atividade);
-	         									if(listaInscricaoAtividade!= null){
-	         										Iterator<Inscricao> i = listaInscricaoAtividade.iterator();
-	         										while(i.hasNext()){
-	         											Inscricao inscricao = i.next();
-	         											out.println("<br>Inscrito: " + inscricao.getParticipante().getNome());
-	         										}
-	         									}
-	         									else{
-	         										out.println("sem inscrições");
-	         									}
+	         				         				         								while(it.hasNext()){
+	         				         				         									_Atividade atividade = it.next();
+	         				         				         									out.println("<br><br>Palestra: " + atividade.getNome());
+	         				         				         									List<Inscricao> listaInscricaoAtividade =  QuestoesProvaProfessorDAO.listaDeInscricaoAtividade(atividade);
+	         				         				         									if(listaInscricaoAtividade!= null){
+	         				         				         										Iterator<Inscricao> i = listaInscricaoAtividade.iterator();
+	         				         				         										while(i.hasNext()){
+	         				         				         											Inscricao inscricao = i.next();
+	         				         				         											out.println("<br>Inscrito: " + inscricao.getParticipante().getNome());
+	         				         				         										}
+	         				         				         									}
+	         				         				         									else{
+	         				         				         										out.println("sem inscrições");
+	         				         				         									}
 
-	         				         			}
+	         				         				         				         			}
 	         			%>
 	         		</table>
 	         		<%}else{
