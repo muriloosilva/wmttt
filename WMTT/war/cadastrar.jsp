@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>WMTT</title>
-<link href="estiloGeral.css" rel="stylesheet" type="text/css" />
-<link href="cadastrar.css" rel="stylesheet" type="text/css" />
+<link href="/css/estiloGeral.css" rel="stylesheet" type="text/css" />
+<link href="/css/cadastrar.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="pagina">
@@ -31,13 +31,13 @@
        			<form method="POST" action="/cadastrarProfessor">
 		         	<div id="caixaAutenticacao">
 		         		
-		         		<div id="acessar" align="center" class="fontePadrao">Cadastro para acesso ao WMTT</div><br><br>
+		         		<div id="acessar" align="center" class="fontePadrao">Cadastro para acesso ao WMTT</div><br>
 		         		
 			         	<%  
 						String erro = (String)request.getAttribute("msg");
 						if(erro!=null){
 						%>
-		         		<div id="erro"><%=erro%></div>
+		         		<div id="erro"><%=erro%></div><br>
 		         		<% } %>
 		         		
 		         		<div class="fontePadrao">Nome:</div>

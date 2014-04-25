@@ -76,7 +76,7 @@ body {
 #menuLateralC{
 	width: 90%;
 	height: 98%;
-	margin-top: 6px;
+	margin-top: 30px;
 	margin-left: 8px;
 	margin-right: 5px;
 	margin-bottom: 5px;
@@ -141,10 +141,94 @@ body {
 	text-decoration:underline;
 }
 
+.fonteMenuLateral{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+	cursor:pointer;	
+}
+
+.fonteMenuLateral:hover{
+	color:white;
+	text-decoration:underline;
+}
+
 .fontePadrao{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:17px;
 	color:#111;
 	text-decoration:none;
 }
+
+.fonteTituloTabela{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	color:#636363;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#erro{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:red;
+	text-decoration:none;
+}
+
+.fonteTitulo{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color: rgb(38, 127, 131);
+	text-decoration:none;	
+	height: 50px;
+}
+
+.col1{
+	text-align: left;
+	padding-left: 7px;
+	width: 280px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.col2{
+	text-align: left;
+	padding-left: 7px;
+	width: 100px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.col3{
+	text-align: left;
+	padding-left: 7px;
+	width: 100px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.col4{
+	text-align: left;
+	padding-left: 7px;
+	width: 180px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.col5{
+	text-align: left;
+	padding-left: 7px;
+	width: 90px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.flexTable tr {
+   background: rgb(240, 240, 240);
+}
+
 
