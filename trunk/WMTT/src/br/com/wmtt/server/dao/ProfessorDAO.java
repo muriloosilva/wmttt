@@ -61,4 +61,33 @@ public class ProfessorDAO {
 		
 	}
 	
+	public static Professor professorCadastrado(String email){
+		
+		PreparedStatement stmt;
+		Professor professor = null;
+		try {
+			Connection con = ConnectionMannager.getConnetion();
+			stmt = con.prepareStatement("select * from professor where email =?");
+			stmt.setString(1,email);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				// criando o objeto Contato
+				professor = new Professor();
+				professor.setIdProfessor(rs.getInt("idProfessor"));
+				professor.setNome(rs.getString("nome"));
+				professor.setEmail(rs.getString("email"));
+				professor.setSenha(rs.getString("senha"));
+			}
+			rs.close();
+			stmt.close();
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		return professor;
+		
+	}
+	
 }

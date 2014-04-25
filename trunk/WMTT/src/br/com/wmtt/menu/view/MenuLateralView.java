@@ -2,77 +2,64 @@ package br.com.wmtt.menu.view;
 
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
-import br.com.wmtt.menu.presenter.MenuLateralPresenter;
-
-public class MenuLateralView extends Composite implements MenuLateralPresenter.Display{
+public class MenuLateralView extends Composite{
 
 	private VerticalPanel vp;
-	private Anchor login, minhasAtividades;
+	private Anchor questoes, editar, imprimir;
 	
 	public MenuLateralView(){
+		
 		vp = new VerticalPanel();
 		initWidget(vp);
-		vp.setBorderWidth(0);
-		vp.setSpacing(0);
-		vp.setVerticalAlignment(VerticalPanel.ALIGN_MIDDLE);
+		//vp.setBorderWidth(0);
+		vp.setSpacing(20);
+//		vp.setVerticalAlignment(VerticalPanel.ALIGN_MIDDLE);
 		vp.setHorizontalAlignment(HorizontalPanel.ALIGN_CENTER);
 		vp.setWidth("100%");
-		vp.setHeight("100%");
-		vp.addStyleName("vpLogin");
+		vp.setHeight("40px");
+		//vp.addStyleName("vpLogin");
 //		vp.addStyleName("vpMainPageContent");
 		
-		login = new Anchor("Login ou Cadastre-se");
-//		login.removeStyleName("gwt-Anchor");
-		login.setWidth("136px");
-		login.addStyleName("loginCadastro");
+		questoes = new Anchor("Questoes");
+		questoes.removeStyleName("gwt-Anchor");
+		questoes.setWidth("136px");
+		questoes.addStyleName("fonteMenuLateral");
 		
-		minhasAtividades = new Anchor("Minhas Atividades");
-		minhasAtividades.addStyleName("loginCadastro");
-		minhasAtividades.setWidth("110px");
-		minhasAtividades.setVisible(false);
+		editar = new Anchor("Editar Prova");
+		editar.removeStyleName("gwt-Anchor");
+		editar.setWidth("136px");
+		editar.addStyleName("fonteMenuLateral");
 		
-		vp.add(login);
-		vp.add(minhasAtividades);
+		imprimir = new Anchor("Imprimir");
+		imprimir.removeStyleName("gwt-Anchor");
+		imprimir.setWidth("136px");
+		imprimir.addStyleName("fonteMenuLateral");
 		
-//		Image img = new Image();
-//		img.setUrl("images/inscreva-se.png");
-//		img.setTitle("inscreva-se");
-//		img.setHeight("100px");
-//		img.setWidth("100px");
-//		
-//		Button b = new Button();
-//		inscrever = new Anchor();
-//		inscrever.setHref("www.google.com.br");
-//		inscrever.setLayoutData(img);
-//		
-//		FlowPanel fp = new FlowPanel();
-//		fp.setWidth("auto");
-//		fp.setHeight("auto");
-//		//fp.add(img);
-//		
-//		vp.add(fp);
+		vp.add(questoes);
+		vp.add(editar);
+		vp.add(imprimir);
+		
 	}
 
-	@Override
 	public Widget asWidget() {
-		// TODO Auto-generated method stub
 		return this;
 	}
 
-	@Override
-	public Anchor getLogin() {
-		// TODO Auto-generated method stub
-		return this.login;
+	public Anchor getQuestoes() {
+		return this.questoes;
 	}
-
-	@Override
-	public Anchor getMinhasAtividades() {
-		// TODO Auto-generated method stub
-		return this.minhasAtividades;
+	
+	public Anchor getEditar() {
+		return this.editar;
 	}
+	
+	public Anchor getImprimir() {
+		return this.imprimir;
+	} 
 
 }

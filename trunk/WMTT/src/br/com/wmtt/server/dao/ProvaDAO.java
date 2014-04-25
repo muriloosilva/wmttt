@@ -34,13 +34,13 @@ public class ProvaDAO {
 		return true;
 	}
 	
-	public static List<Prova> listProva(){
+	public static List<Prova> listProva(int idProfessor){
 		
 		PreparedStatement stmt;
 		List<Prova> provas = new ArrayList<Prova>();
 		try {
 			Connection con = ConnectionMannager.getConnetion();
-			stmt = con.prepareStatement("select * from prova");
+			stmt = con.prepareStatement("select * from prova where idProfessor="+idProfessor);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				
@@ -50,7 +50,7 @@ public class ProvaDAO {
 				prova.setDataCriacao(rs.getDate("dataCriacao"));
 				prova.setValor(rs.getDouble("valor"));
 				prova.setDisciplina(rs.getString("disciplina"));
-				prova.setProfessor(ProfessorDAO.getProfessor(rs.getInt("idProfessr")));
+				prova.setProfessor(ProfessorDAO.getProfessor(rs.getInt("idProfessor")));
 
 				provas.add(prova);
 			}
