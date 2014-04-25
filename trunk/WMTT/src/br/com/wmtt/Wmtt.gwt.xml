@@ -29,6 +29,7 @@
   <source path='menu'/>
   <source path='popup'/>
   <source path='model'/>
+  <source path='control'/>
   
   <extend-property name="locale" values="pt_BR"/>
 
