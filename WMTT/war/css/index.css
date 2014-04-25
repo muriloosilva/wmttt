@@ -1,0 +1,284 @@
+body {
+	background: #F1F1F1 !important;
+}
+
+#main {
+	/* 	border: solid black 1px; */
+	width: 100%;
+	height: auto;
+	/* 	margin-left: 8%; */ /* 	margin-right: 8%; */
+	/* 	background-color: green; */ /* 	background-color: white; */
+	margin-left: auto;
+	margin-right: auto;
+	/*     min-height: 100%; */
+}
+
+#menu {
+	width: 100%;
+	height: auto;
+}
+
+#menuHorizontal {
+	width: auto;
+	margin-left: 10%;
+	height: auto;
+	margin-right: 10%;
+}
+
+.menuTop{
+	float:right;
+}
+
+#menuDir {
+	width: auto;
+	margin-left: 0%;
+	height: auto;
+	margin-right: 10px;
+	float: right;
+}
+
+.aMenuDir {
+	color: black;
+	display: block;
+	text-decoration: none;
+	padding: 10px 0px 10px 0px;
+}
+
+.nomeUsuario {
+	font: bold;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 0px 0px 0px 5px;
+	margin: 20px 0px 20px 0px;
+	margin-right: 0px;
+	border: none !important;
+	background-color: #09043F;
+	color: #FFFFFF !important;
+	display: block;
+}
+
+.hpUsuario {
+	margin-right: 10px;
+float: right;
+}
+
+.aMenuDir a:HOVER {
+	text-decoration: none;
+}
+
+.menuTopDir{
+	float: left;
+}
+
+.hpMainMenu{width: 100%;}
+
+.esgotado{
+	color: red;
+}
+
+.aMenuHorizontal {
+	border: none !important;
+	background-color: #4F4E5A;
+	color: #FFFFFF !important;
+	display: block;
+	text-decoration: none;
+padding: 0px 0px 0px 5px;
+margin: 20px 40px 20px 0px;
+}
+
+.loginCadastro{
+	border: none !important;
+background-color: #09043F;
+color: #FFFFFF !important;
+display: block;
+text-decoration: none;
+padding: 10px 0px 10px 0px;
+margin-right: 0px;
+}
+
+.vpLogin{
+	background-color: #09043F;
+}
+
+.vpLogin a:HOVER{
+	text-decoration: none;
+}
+
+a:HOVER{
+	text-decoration: none;
+}
+
+.aMenuHorizontalSobre {
+	border: none !important;
+	background-color: #09043F;
+	color: #FFFFFF !important;
+	display: block;
+	text-decoration: none;
+padding: 0px 0px 0px 5px;
+margin: 20px 40px 20px 0px;
+}
+
+.conteudoApresentacao{
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-bottom: 7px;
+}
+
+p{
+	padding-bottom: 2px;
+	text-align: justify;
+}
+
+.aMenuUsuario {
+	border: none !important;
+	background-color: #09043F;
+	color: #FFFFFF !important;
+	display: block;
+	text-decoration: none;
+	padding: 0px 0px 0px 5px;
+margin: 20px 0px 20px 40px;
+}
+
+/* color: black; */
+/* 	display: block; */
+/* 	text-decoration: none; */
+/* 	padding: 10px 40px 10px 0px; */
+.aMenuHorizontal a:HOVER {
+	text-decoration: none;
+}
+
+#aMenuHorizontalLogin {
+	color: black;
+	display: block;
+	text-decoration: none;
+	padding: 10px 40px 10px 0px;
+}
+
+#aMenuHorizontalLogin a:HOVER {
+	text-decoration: none;
+}
+
+#banner {
+	width: auto;
+	margin-left: 10%;
+	height: 300px;
+	margin-right: 10%;
+	background-image: url(/images/logoresize.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#corpo {
+	/* 	border: solid green 1px; */
+	width: auto;
+	margin-left: 10%;
+	/*depois mudar o height para auto*/
+	min-height: auto;
+	margin-right: 10%;
+}
+
+#corpoEsquerdo {
+	/* 	border: solid red 1px; */
+	height: 100px;
+	background-image: url(/images/back_bodyLeft.png);
+	border-radius: 10px;
+	width: 17%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	/*depois mudar o height para auto*/
+	float: left;
+	background: #DADADA !important;
+}
+
+#corpoDireito {
+	width: 75%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	/*depois mudar o height para auto*/
+	height: auto;
+	float: right;
+	background: #FCFCFC !important;
+}
+
+.vPanelApresentacao {
+	border: solid blue 3px;
+	width: 100%;
+	margin-left: 2%;
+	margin-right: 1%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	/*depois mudar o height para auto*/
+	height: 600px;
+	/*float: left;*/
+}
+
+/* PageContent */
+.vpMainPageContent {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.lbTitle {
+	color: black;
+	font-size: 18px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	color: #09043f;
+}
+
+.tabelaAtividades {
+	
+}
+
+.backLabelAtividades {
+	background-image: url("/images/back.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-left: 0px !important;
+	color: #09043f;
+	font-weight: bold;
+}
+
+.lbTituloAtividade {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.loadingPopup{
+	
+	padding: 10px;
+	
+}
+
+.passwd{
+	
+	line-height: 0px;
+	
+}
+
+.gwt-Anchor{
+	cursor:pointer;
+	
+}
+
+.lbInscrito{
+	
+}
+
+#rodape{
+	background: transparent;
+height: 60px;
+margin-left: 10%;
+margin-right: 10%;
+}
+
+.imgRodape{
+		background: transparent;
+	height: 60px;
+	width: 1063px;
+	padding-bottom: 15px;
+}
