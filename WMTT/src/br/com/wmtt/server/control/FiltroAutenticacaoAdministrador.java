@@ -1,4 +1,4 @@
-package br.com.wmtt.server.controle;
+package br.com.wmtt.server.control;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-public class FiltroAutenticacaoProfessor implements Filter{
+public class FiltroAutenticacaoAdministrador implements Filter{
 
 	public void init(FilterConfig config) throws ServletException {
 	}

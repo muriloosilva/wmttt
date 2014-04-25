@@ -1,9 +1,14 @@
 package br.com.wmtt.shared.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class Prova {
+public class Prova implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int idProva;
 	private String nome;
 	private Date dataCriacao;

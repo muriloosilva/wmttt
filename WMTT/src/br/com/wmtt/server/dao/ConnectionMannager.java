@@ -11,7 +11,7 @@ public class ConnectionMannager {
 		Connection conn = null;
 		try {
 			Class.forName("org.postgresql.Driver");
-			conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/eventschool", "postgres","123456");
+			conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/wmtt-db", "postgres","123456");
 			System.out.println("Conectado? " + conn.isClosed());
 		} catch (SQLException e) {
 			e.printStackTrace();

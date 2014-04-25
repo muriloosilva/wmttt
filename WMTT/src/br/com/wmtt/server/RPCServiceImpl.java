@@ -5,12 +5,15 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import br.com.wmtt.client.RPCService;
+import br.com.wmtt.server.dao.ProvaDAO;
 import br.com.wmtt.server.dao._AtiDataDAO;
 import br.com.wmtt.server.dao._AtividadeDAO;
 import br.com.wmtt.server.dao._DataDAO;
 import br.com.wmtt.server.dao._InscricaoDAO;
 import br.com.wmtt.server.dao._LoginDAO;
 import br.com.wmtt.server.dao._ParticipanteDAO;
+import br.com.wmtt.shared.model.Professor;
+import br.com.wmtt.shared.model.Prova;
 import br.com.wmtt.shared.model._Atividade;
 import br.com.wmtt.shared.model._Data;
 import br.com.wmtt.shared.model._User;
@@ -20,6 +23,18 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 @SuppressWarnings("serial")
 public class RPCServiceImpl extends RemoteServiceServlet implements RPCService {
 
+	@Override
+	public List<Prova> getListProvas(){
+		Professor professor = pegarSessao();
+		return ProvaDAO.listProva(professor.getIdProfessor());
+		
+	}
+	
+	@Override
+	public boolean cadastrarProva(Prova prova){
+		return ProvaDAO.addProva(prova);
+	}
+	
 	@Override
 	public List<_Atividade> getAtividades() {
 
@@ -85,6 +100,14 @@ public class RPCServiceImpl extends RemoteServiceServlet implements RPCService {
 		HttpSession session = getThreadLocalRequest().getSession();
 		_User user = (_User) session.getAttribute("user");
 		return user;
+	}
+	
+	@Override
+	public Professor pegarSessao() {
+		// TODO Auto-generated method stub
+		HttpSession session = getThreadLocalRequest().getSession();
+		Professor professor = (Professor) session.getAttribute("professor");
+		return professor;
 	}
 
 	@Override

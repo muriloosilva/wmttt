@@ -2,7 +2,7 @@ package br.com.wmtt.menu.view;
 
 import java.util.List;
 
-import br.com.wmtt.content.PageContent;
+import br.com.wmtt.client.content.PageContent;
 
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTML;
