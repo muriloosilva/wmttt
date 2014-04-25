@@ -2,7 +2,7 @@
 
    <filter>
     <filter-name>Administrador</filter-name>
-    <filter-class>br.com.wmtt.server.controle.FiltroAutenticacaoAdministrador</filter-class>
+    <filter-class>br.com.wmtt.server.control.FiltroAutenticacaoAdministrador</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>Administrador</filter-name>
@@ -10,7 +10,7 @@
   </filter-mapping>
   <filter>
     <filter-name>Professor</filter-name>
-    <filter-class>br.com.wmtt.server.controle.FiltroAutenticacaoProfessor</filter-class>
+    <filter-class>br.com.wmtt.server.control.FiltroAutenticacaoProfessor</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>Professor</filter-name>
@@ -18,6 +18,32 @@
   </filter-mapping>
     
   <!-- Servlets -->
+  <!-- ######### -->
+  
+  <servlet>
+    <servlet-name>Cadastro Professor</servlet-name>
+    <servlet-class>br.com.wmtt.server.control.ServletCadastroProfessor</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Cadastro Professor</servlet-name>
+    <url-pattern>/cadastrarProfessor</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ######### -->
+  
+  <servlet>
+    <servlet-name>Login Professor</servlet-name>
+    <servlet-class>br.com.wmtt.server.control.ServletLoginProfessor</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Login Professor</servlet-name>
+    <url-pattern>/loginProfessor</url-pattern>
+  </servlet-mapping>
+  
+  <!-- ######### -->
+  
   <servlet>
     <servlet-name>RPCServiceServlet</servlet-name>
     <servlet-class>br.com.wmtt.server.RPCServiceImpl</servlet-class>
