@@ -1,0 +1,150 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background: #F1F1F1 !important;
+}
+
+#pagina{
+	width:1000px;
+	height: 350px; 
+	max-height: 10000px;
+	margin:auto;
+	text-align:left;
+	position:relative;
+}
+
+#cabecalho{
+	top: 10px;
+	width:100%;
+	height:60px;
+}
+
+#rodape{
+	width:100%;
+	height:20px;
+	background: #1A9696 !important;
+	left: 0px;
+	position: absolute;
+}
+
+#logo{
+	width:16%;
+	height:100%;
+	background: #02040A !important;
+	float: left;
+}
+
+#menu{
+	width:84%;
+	height:60px;
+	float: right;
+	background: #1A9696 !important;
+}
+
+#menuLateral{
+	width:16%;
+	height:100%;
+	float: left;
+	background: rgba(26, 150, 150, 0.45) !important;
+}
+
+#corpo{
+	width:100%;
+	height:100%;
+	float: right;
+	background: white !important;
+}
+
+#logoC{
+	width: 90%;
+	height: 80%;
+	margin-top: 6px;
+	margin-left: 22px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#menuC{
+	width: 98%;
+	height: 80%;
+	margin-top: 15px;
+	margin-left: 8px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#menuLateralC{
+	width: 90%;
+	height: 98%;
+	margin-top: 6px;
+	margin-left: 8px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#corpoC{
+	width: 96%;
+	height: 91%;
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-right: 16px;
+}
+
+#caixaAutenticacao{
+	
+	border: solid #D5D5D5 1px;
+	width: 30%;
+	height: 240px;
+	float: right;
+	padding: 20px;
+	
+}
+
+#caixaEmail{
+	width: 284px;
+}
+
+#caixaSenha{
+	width: 284px;
+}
+
+#caixaSobre{
+	
+	border: solid #D5D5D5 1px;
+	width: 58%;
+	height: 240px;
+	float: left;
+	padding: 20px;
+	
+}
+
+.fonteLogo{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:38px;
+	font-weight:bold;
+	color:rgb(3, 255, 215);
+	text-decoration:none;
+}
+
+.fonteMenu{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:22px;
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+	cursor:pointer;	
+	padding-left: 135px;
+}
+
+.fonteMenu:hover{
+	color:white;
+	text-decoration:underline;
+}
+
+.fontePadrao{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	color:#111;
+	text-decoration:none;
+}
+
