@@ -2,6 +2,8 @@ package br.com.wmtt.client;
 
 import java.util.List;
 
+import br.com.wmtt.shared.model.Professor;
+import br.com.wmtt.shared.model.Prova;
 import br.com.wmtt.shared.model._Atividade;
 import br.com.wmtt.shared.model._Data;
 import br.com.wmtt.shared.model._User;
@@ -9,6 +11,10 @@ import br.com.wmtt.shared.model._User;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 public interface RPCServiceAsync {
+	
+	public void getListProvas(AsyncCallback<List<Prova>> callback);
+	
+	public void cadastrarProva(Prova prova, AsyncCallback<Boolean> callback);
 
 	public void getAtividades(AsyncCallback<List<_Atividade>> callback);
 
@@ -31,6 +37,8 @@ public interface RPCServiceAsync {
 	public void getSession(AsyncCallback<_User> callback);
 
 	public void getSessao(AsyncCallback<Boolean> callback);
+	
+	public void pegarSessao(AsyncCallback<Professor> callback);
 
 	public void inscrever(int codAtividade, AsyncCallback<Integer> callback);
 	
