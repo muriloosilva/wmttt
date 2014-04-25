@@ -18,12 +18,11 @@
 </head>
 <body> 
 
-	<% 
-	Usuario usuario = (Usuario)session.getAttribute("usuario");
-	int idEvento = Integer.parseInt(request.getParameter("cod"));
-    Evento evento = EventoDAO.pegarEvento(idEvento);
-    
-  	%>
+	<%
+ 		Usuario usuario = (Usuario)session.getAttribute("usuario");
+ 		int idEvento = Integer.parseInt(request.getParameter("cod"));
+ 	    Evento evento = ProvaDAO.pegarEvento(idEvento);
+ 	%>
 	<div id="principal">
 		 <div id="top"></div>
 		 <div id="menuHeader">
