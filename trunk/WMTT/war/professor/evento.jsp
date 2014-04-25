@@ -18,12 +18,11 @@
 </head>
 <body>
 
-	<% 
-	Usuario usuario = (Usuario)session.getAttribute("usuario");
-    int idEvento = Integer.parseInt(request.getParameter("cod"));
-    Evento evento = EventoDAO.pegarEvento(idEvento);
-    
-  	%>
+	<%
+		Usuario usuario = (Usuario)session.getAttribute("usuario");
+	    int idEvento = Integer.parseInt(request.getParameter("cod"));
+	    Evento evento = ProvaDAO.pegarEvento(idEvento);
+	%>
 	
 	
 	<div id="principal">
@@ -85,7 +84,7 @@
 	         				<td class="col5"><%=atividade.getVagas()%></td>
 	         				
 	         				<%
-	         					         					if(InscricoesDAO.verificarInscricao(atividade, usuario)){
+	         					         					if(QuestoesProvaProfessorDAO.verificarInscricao(atividade, usuario)){
 	         					         				%>
 	         				
 	         					<td class="col6">Inscrito <a href="/EventSchool/cancelar?cod=<%=idEvento%>&at=<%=atividade.getIdAtividade()%>">cancelar</a></td>
@@ -106,8 +105,8 @@
 	         		</table>
 	         		<%
 	         			}else{
-	         			         			         			out.println("Não existe palestra cadastrada");
-	         			         			         		}
+	         			         			         			         			         			out.println("Não existe palestra cadastrada");
+	         			         			         			         			         		}
 	         		%>
 	         	</div>
 	         	
@@ -115,7 +114,7 @@
 	         	<div id="tabelaAtividade">
 	         	<%
 	         		List<_Atividade> listaMinicursoEvento = _AtividadeDAO.listaDeMinicursoEvento(idEvento);
-	         		         			if(listaMinicursoEvento != null){
+	         		         		         		         			if(listaMinicursoEvento != null){
 	         	%>
 				
 	         	
@@ -130,8 +129,8 @@
 	         			
 	         			<%
 	         				         				Iterator<_Atividade> it = listaMinicursoEvento.iterator();
-	         				         				         				         								while(it.hasNext()){
-	         				         				         				         									_Atividade atividade = it.next();
+	         				         				         				         				         				         				         				         								while(it.hasNext()){
+	         				         				         				         				         				         				         				         									_Atividade atividade = it.next();
 	         				         			%>
 	         			
 	         			<tr>
@@ -142,7 +141,7 @@
 	         				<td class="col5"><%=atividade.getVagas()%></td>
 	         				
 	         				<%
-	         					         					if(InscricoesDAO.verificarInscricao(atividade, usuario)){
+	         					         					if(QuestoesProvaProfessorDAO.verificarInscricao(atividade, usuario)){
 	         					         				%>
 	         				
 	         					<td class="col6">Inscrito <a href="/EventSchool/cancelar?cod=<%=idEvento%>&at=<%=atividade.getIdAtividade()%>">cancelar</a></td>
@@ -163,8 +162,8 @@
 	         		</table>
 	         		<%
 	         			}else{
-	         			         			         			out.println("Não existe minicurso cadastrado");
-	         			         			         		}
+	         			         			         			         			         			out.println("Não existe minicurso cadastrado");
+	         			         			         			         			         		}
 	         		%>
 	         	</div>
 	         	
@@ -172,7 +171,7 @@
 	         	<div id="tabelaAtividade">
 	         	<%
 	         		List<_Atividade> listaOficinasEvento = _AtividadeDAO.listaDeOficinaEvento(idEvento);
-	         		         			if(listaOficinasEvento != null){
+	         		         		         		         			if(listaOficinasEvento != null){
 	         	%>
 				
 	         	
@@ -187,18 +186,20 @@
 	         			
 	         			<%
 	         				         				Iterator<_Atividade> it = listaOficinasEvento.iterator();
-	         				         								while(it.hasNext()){
-	         				         									_Atividade atividade = it.next();
+	         				         				         				         				         				         								while(it.hasNext()){
+	         				         				         				         				         				         									_Atividade atividade = it.next();
 	         				         			%>
 	         			
 	         			<tr>
-	         				<td class="col1"><%=atividade.getNome() %></td>
-	         				<td class="col2"><%=DataHourFormat.formatarData(atividade.getData()) %></td>
-	         				<td class="col3"><%=atividade.getHoraInicio() %></td>
-	         				<td class="col4"><%=atividade.getHoraFim() %></td>
-	         				<td class="col5"><%=atividade.getVagas() %></td>
+	         				<td class="col1"><%=atividade.getNome()%></td>
+	         				<td class="col2"><%=DataHourFormat.formatarData(atividade.getData())%></td>
+	         				<td class="col3"><%=atividade.getHoraInicio()%></td>
+	         				<td class="col4"><%=atividade.getHoraFim()%></td>
+	         				<td class="col5"><%=atividade.getVagas()%></td>
 	         				
-	         				<%if(InscricoesDAO.verificarInscricao(atividade, usuario)){ %>
+	         				<%
+	         					         					if(QuestoesProvaProfessorDAO.verificarInscricao(atividade, usuario)){
+	         					         				%>
 	         				
 	         					<td class="col6">Inscrito <a href="/EventSchool/cancelar?cod=<%=idEvento%>&at=<%=atividade.getIdAtividade()%>">cancelar</a></td>
 	         					

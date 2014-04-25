@@ -36,14 +36,13 @@
 	         	<div id="tabelaProgramacao">
 	         		<table>
 	         		<tr><td class="col1"><div class="fontTituloTabela">Nome</div></td><td class="col2"><div class="fontTituloTabela">Local</div></td><td class="col3"><div class="fontTituloTabela">Data Início</div></td></tr>
-	         		<%                    
-                   List<Evento> listaDeEventos = EventoDAO.listaDeEventos();
-                   if(listaDeEventos != null){
-                 	  Iterator<Evento> ic = listaDeEventos.iterator();
-                 	  while(ic.hasNext()){
-                 		  Evento evento = ic.next();
-                	      
-                	%>
+	         		<%
+	         			List<Evento> listaDeEventos = ProvaDAO.listaDeEventos();
+	         		                   if(listaDeEventos != null){
+	         		                 	  Iterator<Evento> ic = listaDeEventos.iterator();
+	         		                 	  while(ic.hasNext()){
+	         		                 		  Evento evento = ic.next();
+	         		%>
 	         			
 	         			<tr><td class="col1"><%=evento.getNome()%></td> <td class="col2"><%=evento.getLocal()%></td><td class="col3"><%=evento.getDataInicioFormatada()%></td> <td class="col4"><a href="/EventSchool/participante/evento.jsp?cod=<%=evento.getId_evento()%>">acessar</a></td></tr>
 	         		<%}}
